@@ -54,7 +54,6 @@ def allRunoutsByHandPickleFull(number): ## performs allRunoutsByHandToPickle on 
     allHands = pickle.load(file1_pickle)
     file1_pickle.close()
     while i < 1326:
-        print(i)
         name=allHands[i][0]+allHands[i][1]
         allRunoutsByHandToPickle(name)
         i+=1
@@ -90,10 +89,10 @@ def handAllPreWinPercentages(hand): ###1st cell, base hand wins, 2nd cell loses,
             v=SimulateHand.two_hands_theoretical_by_pickle(hand,str(currHand[0]+currHand[1]))
             dumpArray[i][0]=v[0]
             dumpArray[i][1]=v[1]
-            dumpArray[i][0] = v[2]
+            dumpArray[i][2] = v[2]
         i+=1
     v = "D:\AllValuesByHand\AllHandsPrePercentages\\"
-    file1_pickle = open(+hand+ "PrePercentagesValues.pickle", "wb")
+    file1_pickle = open(v+hand+ "PrePercentagesValues.pickle", "wb")
     pickle.dump(dumpArray, file1_pickle, pickle.HIGHEST_PROTOCOL)
     file1_pickle.close()
 

@@ -14,7 +14,6 @@ def two_hands_theoretical_by_pickle(name1,name2): ## Takes in pickled files
     h2= "D:\AllValuesByHand\AllRunoutsByHandPickle\\" + name2 + 'Values.pickle'
     h1file=open(h1, "rb")
     h2file=open(h2, "rb")
-    h3file=open("allCombinatiosOfRunouts.pickle","rb")
     h1Hands= pickle.load(h1file)
     h2Hands= pickle.load(h2file)
     h2file.close()
@@ -183,4 +182,5 @@ def checkHandContents():
     print("full house"+ str(fullHouse/total))
     print(" quads"+ str(Quads/total))
     print(" straight flush"+ str(straightFlush/total))
+
 
